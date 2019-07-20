@@ -66,6 +66,7 @@ GEM
     ffi (1.9.25)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    graphql (1.9.7)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jsonapi-renderer (0.2.0)
@@ -194,6 +195,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.11)
   byebug (~> 10.0.0)
   dotenv-rails (~> 2.2.1)
+  graphql (~> 1.9)
   listen (~> 3.1.5)
   pg (~> 0.21)
   pry (~> 0.11.3)
@@ -212,4 +214,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
