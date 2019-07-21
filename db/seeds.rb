@@ -23,7 +23,7 @@ Contact.create!(
       how_met: 'Renaissance festival trip at Bates College',
       frequency: 30,
       priority: 90,
-      last_contacted: '2019-19-07',
+      last_contacted: Time.parse("Jul 8 2019 10:19"),
       user: holly
     },
     {
@@ -31,7 +31,7 @@ Contact.create!(
       how_met: 'Maid of Honor at my wedding',
       frequency: 270,
       priority: 25,
-      last_contacted: '2019-19-01',
+      last_contacted: Time.parse("Jan 8 2019 10:19"),
       user: holly
     }
   ]

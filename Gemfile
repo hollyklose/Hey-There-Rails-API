@@ -31,3 +31,7 @@ group :production do
 end
 
 gem "graphql", "~> 1.9"
+gem 'graphiql-rails', '1.5.0', group: :development
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
