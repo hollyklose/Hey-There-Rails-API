@@ -9,5 +9,6 @@ module Types
     # field :user_id, Types::UserType, null: false
     # field :user_id, Integer, null: false
     field :user, Types::UserType, null: false
+    field :user_id, Integer, null: false
   end
 end

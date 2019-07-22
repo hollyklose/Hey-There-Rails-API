@@ -18,7 +18,8 @@ module Mutations
         frequency: frequency,
         priority: priority,
         last_contacted: last_contacted,
-        user: User.find_by(id: user_id)
+        user: User.find_by(id: user_id),
+        user_id: user_id
       )
     end
   end
