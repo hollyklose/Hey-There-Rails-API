@@ -21,6 +21,8 @@ module Mutations
         user: User.find_by(id: user_id),
         user_id: user_id
       )
+      new_contact = Contact.find_by(last_contacted: last_contacted)
+      return new_contact
     end
   end
 end

@@ -10,10 +10,12 @@ module Mutations
 
     def resolve(id: nil, user_id: nil)
       contact_to_delete = Contact.find_by_id(id)
-      puts 'before'
       if user_id == contact_to_delete.user_id
-        contact_to_delete.destroy!()
+        contact_to_delete.destroy!
+        returned_user = User.find_by_id(user_id)
+        return contact_to_delete
       end
+      'Contact was not deleted.'
     end
   end
 end
