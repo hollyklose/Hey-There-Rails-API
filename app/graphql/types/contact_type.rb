@@ -6,8 +6,6 @@ module Types
     field :frequency, Integer, null: false
     field :priority, Integer, null: false
     field :last_contacted, DateTimeType, null: false
-    # field :user_id, Types::UserType, null: false
-    # field :user_id, Integer, null: false
     field :user, Types::UserType, null: false
     field :user_id, Integer, null: false
   end
