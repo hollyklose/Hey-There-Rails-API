@@ -33,6 +33,22 @@ Contact.create!(
       priority: 25,
       last_contacted: Time.parse("Jan 8 2019 10:19"),
       user: holly
+    },
+    {
+      name: 'Eliza Kano-Bower',
+      how_met: 'running club friend',
+      frequency: 120,
+      priority: 25,
+      last_contacted: Time.parse("May 8 2019 10:19"),
+      user: holly
+    },
+    {
+      name: 'It has been way too long',
+      how_met: 'Maid of Honor at my wedding',
+      frequency: 10,
+      priority: 25,
+      last_contacted: Time.parse("May 8 2019 10:19"),
+      user: holly
     }
   ]
 )

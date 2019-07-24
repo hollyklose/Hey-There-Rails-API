@@ -8,7 +8,10 @@ module Types
     end
 
     def contacts(user_id:)
-      Contact.where(user_id: user_id)
+      if user_id
+      return Contact.where(user_id: user_id)
+      end
+      []
     end
 
     field :contact, Types::ContactType, null: false do
