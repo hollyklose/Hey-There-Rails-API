@@ -43,8 +43,8 @@ Contact.create!(
       user: holly
     },
     {
-      name: 'It has been way too long',
-      how_met: 'Maid of Honor at my wedding',
+      name: 'Conrad Armstrong',
+      how_met: 'Met through friend of Mike D',
       frequency: 10,
       priority: 25,
       last_contacted: Time.parse("May 8 2019 10:19"),

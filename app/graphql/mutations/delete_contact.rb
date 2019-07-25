@@ -5,7 +5,6 @@ module Mutations
     argument :user_id, Integer, required: true
 
     # return type from the mutation
-    # return_field :deletedName, types.String
     type Types::ContactType
 
     def resolve(id: nil, user_id: nil)
