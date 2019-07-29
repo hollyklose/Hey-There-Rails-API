@@ -70,6 +70,7 @@ bundle add 'coffee-rails'
   ### Entity Relationship Diagram:
 
 [Actual](https://imgur.com/kXsgT68)
+
 [Stretch](https://imgur.com/BpucYV1)
 
 ### User stories
