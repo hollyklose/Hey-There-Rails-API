@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_20_175103) do
+ActiveRecord::Schema.define(version: 2019_08_28_200841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,18 @@ ActiveRecord::Schema.define(version: 2019_07_20_175103) do
     t.index ["user_id"], name: "index_examples_on_user_id"
   end
 
+  create_table "tag_instances", force: :cascade do |t|
+    t.bigint "contact_id"
+    t.bigint "tag_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_tag_instances_on_contact_id"
+    t.index ["tag_id"], name: "index_tag_instances_on_tag_id"
+  end
+
+# Could not dump table "tags" because of following StandardError
+#   Unknown type 'tag_types' for column 'type'
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "token", null: false
@@ -47,4 +59,7 @@ ActiveRecord::Schema.define(version: 2019_07_20_175103) do
 
   add_foreign_key "contacts", "users"
   add_foreign_key "examples", "users"
+  add_foreign_key "tag_instances", "contacts"
+  add_foreign_key "tag_instances", "tags"
+  add_foreign_key "tags", "users"
 end

@@ -31,6 +31,10 @@ module HeyThereRailsApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    # I added this to change from using schema to structure.sql as source of db truth
+    # See: https://sipsandbits.com/2018/04/30/using-database-native-enums-with-rails/
+    config.active_record.schema_format = :sql
+
     config.load_defaults 5.1
     # By default in Rails 4 loading an AR model won't establish a connection
     # to the database until AR needs to fetch database therefore in the console
