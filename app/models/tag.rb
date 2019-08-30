@@ -2,7 +2,9 @@ class Tag < ApplicationRecord
   belongs_to :user
   has_many :tag_instances, dependent: :destroy
 
-  enum type: {
+  validates :name, uniqueness: true
+
+  enum genre: {
     location: 'location',
     company: 'company',
     school: 'school',

@@ -26,5 +26,33 @@ module Types
         return contact_to_display
       end
     end
+
+    field :tags, [Types::TagType], null: true do
+      description 'An array of the User created tags'
+      argument :user_id, Integer, required: true
+    end
+
+    def tags(user_id:)
+      if user_id
+        return Tag.where(user_id: user_id)
+      end
+      []
+    end
+
+    field :tag_instances, [Types::TagInstanceType], null: true do
+      description 'An array of tags as they are applied to specific User contacts'
+      argument :contact_id, Integer, required: false
+      argument :tag_id, Integer, required: false
+    end
+
+    def tag_instances(contact_id:, tag_id:)
+      if contact_id
+        return Tag_Instance.where(contact_id: contact_id)
+      end
+      if tag_id
+        return Tag_Instance.where(tag_id: tag_id)
+      end
+    end
+
   end
 end

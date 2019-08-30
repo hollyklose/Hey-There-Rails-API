@@ -158,7 +158,7 @@ CREATE TABLE public.tags (
     user_id bigint,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    type public.tag_types
+    genre public.tag_types
 );
 
 
@@ -407,6 +407,8 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190828191626'),
 ('20190828192058'),
 ('20190828194902'),
-('20190828200841');
+('20190828200841'),
+('20190830172950'),
+('20190830210135');
 
 
