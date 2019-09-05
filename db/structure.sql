@@ -124,7 +124,8 @@ CREATE TABLE public.tag_instances (
     contact_id bigint,
     tag_id bigint,
     created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL
+    updated_at timestamp without time zone NOT NULL,
+    user_id bigint
 );
 
 
@@ -334,6 +335,13 @@ CREATE INDEX index_tag_instances_on_tag_id ON public.tag_instances USING btree (
 
 
 --
+-- Name: index_tag_instances_on_user_id; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE INDEX index_tag_instances_on_user_id ON public.tag_instances USING btree (user_id);
+
+
+--
 -- Name: index_tags_on_user_id; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -352,6 +360,14 @@ CREATE UNIQUE INDEX index_users_on_email ON public.users USING btree (email);
 --
 
 CREATE UNIQUE INDEX index_users_on_token ON public.users USING btree (token);
+
+
+--
+-- Name: tag_instances fk_rails_303ad5bdd7; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.tag_instances
+    ADD CONSTRAINT fk_rails_303ad5bdd7 FOREIGN KEY (user_id) REFERENCES public.users(id);
 
 
 --
@@ -409,6 +425,7 @@ INSERT INTO "schema_migrations" (version) VALUES
 ('20190828194902'),
 ('20190828200841'),
 ('20190830172950'),
-('20190830210135');
+('20190830210135'),
+('20190904204944');
 
 

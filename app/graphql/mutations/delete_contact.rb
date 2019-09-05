@@ -11,7 +11,6 @@ module Mutations
       contact_to_delete = Contact.find_by_id(id)
       if user_id == contact_to_delete.user_id
         contact_to_delete.destroy!
-        returned_user = User.find_by_id(user_id)
         return contact_to_delete
       end
       'Contact was not deleted.'

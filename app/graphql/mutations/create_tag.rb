@@ -9,7 +9,7 @@ module Mutations
     # return type from the mutation
     type Types::TagType
 
-    def resolve(name: nil, custom_tag_description: nil, genre: nil, user_id: user_id)
+    def resolve(name: nil, custom_tag_description: nil, genre: nil, user_id: nil)
       Tag.create!(
         name: name,
         custom_tag_description: custom_tag_description,
